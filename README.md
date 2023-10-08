@@ -1,0 +1,19 @@
+# NOAA tide stations
+
+Grabs all NOAA tide stations from the level 4 group ids. Output file is `tide-stations.json`
+
+## Example usage
+
+`python3 get-noaa-tide-stations.py`
+
+### Output
+
+```
+Grabbing groups...
+Grabbing stations in group id 1743...
+Grabbing stations in group id 1746...
+Grabbing stations in group id 1748...
+Grabbing stations in group id 1749...
+Grabbing stations in group id 1750...
+Success, writing to tide-stations.json
+```

@@ -6,7 +6,7 @@ stationsUrl = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/geogroups
 filename = "tide-stations.json"
 tideStationsByGroup = []
 
-print("Grabbing geo groups...")
+print("Grabbing groups...")
 result = requests.get(geoGroupsUrl).json()
 
 geoGroupList = result["geoGroupList"]
@@ -30,6 +30,6 @@ for group in geoGroupList:
     stationsByGroup["stations"] = stations
     tideStationsByGroup.append(stationsByGroup)
 
-print("success, writing to {}".format(filename))
+print("Success, writing to {}".format(filename))
 with open(filename, "w") as output:
     json.dump(tideStationsByGroup, output)
